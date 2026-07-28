@@ -1097,8 +1097,25 @@ body.blazx-page {
     }
 
     @media (max-width:900px) {
+      .nav-inner {
+        flex-wrap: wrap;
+        padding: 12px 20px;
+        gap: 16px;
+      }
+      .logo-img {
+        height: 60px;
+      }
       nav.links {
-        display: none;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        margin-left: 0;
+        margin-top: 10px;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      .nav-cta {
+        margin-left: auto;
       }
     }
 
@@ -1113,6 +1130,19 @@ body.blazx-page {
       grid-template-columns: 1.15fr 0.85fr;
       gap: 48px;
       align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-actions {
+        justify-content: center;
+      }
+      .hero-sub {
+        margin: 20px auto 0;
+      }
     }
 
     .hero h1 {
@@ -1559,6 +1589,27 @@ body.blazx-page {
       color: #5C5C66;
       flex-wrap: wrap;
       gap: 10px;
+    }
+
+    @media (max-width: 900px) {
+      .foot-grid {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 24px;
+      }
+      .foot-logo-img {
+        height: 80px;
+      }
+      .foot-links {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .foot-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+      }
     }
 
 /* --- NEW SERVICES STYLES --- */
