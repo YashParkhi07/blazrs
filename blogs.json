@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "The Future of Enterprise AI",
+    "date": "July 28, 2026",
+    "excerpt": "How AI agents and intelligent workflows are reshaping how businesses operate in the modern era.",
+    "category": "Artificial Intelligence",
+    "content": "<p>Artificial intelligence is no longer just a buzzword; it is fundamentally altering the enterprise landscape. In the coming years, we will see a shift from simple task automation to complex, autonomous agents that can make decisions, orchestrate workflows, and learn from their environments.</p><h2>The Rise of Autonomous Agents</h2><p>Unlike traditional software that follows rigid rules, autonomous agents can adapt. They understand intent, gather context, and execute multi-step processes across different systems. This means less time spent on manual coordination and more time focused on strategic initiatives.</p><p>Organizations that adopt these technologies early will build a significant competitive advantage. It's not just about doing things faster; it's about doing things differently.</p>"
+  },
+  {
+    "id": 2,
+    "title": "Mastering Salesforce Data Cloud",
+    "date": "July 15, 2026",
+    "excerpt": "A deep dive into why unified customer profiles are critical for personalized marketing and service.",
+    "category": "Salesforce",
+    "content": "<p>In today's hyper-connected world, customers expect seamless experiences across all touchpoints. However, many organizations struggle with siloed data, making it impossible to deliver on this expectation. This is where Salesforce Data Cloud comes in.</p><h2>Building the Customer 360</h2><p>Data Cloud allows businesses to ingest data from anywhere, harmonize it into a unified profile, and activate it across the entire Salesforce ecosystem. Whether a customer interacts with your website, calls your support team, or opens an email, you have a complete view of their journey.</p><p>By mastering Data Cloud, companies can move beyond generic marketing campaigns and deliver truly personalized experiences that drive loyalty and growth.</p>"
+  },
+  {
+    "id": 3,
+    "title": "Digital Transformation in 2026",
+    "date": "June 02, 2026",
+    "excerpt": "Key trends and strategies for organizations looking to scale and adapt to new technologies.",
+    "category": "Strategy",
+    "content": "<p>Digital transformation is a continuous journey. As we navigate 2026, the focus has shifted from mere digitization to creating agile, resilient organizations capable of continuous adaptation.</p><h2>Key Trends</h2><ul><li><strong>AI-First Architectures:</strong> Building systems with AI capabilities deeply integrated from the ground up.</li><li><strong>Composable Business:</strong> Leveraging modular, interchangeable components to quickly adapt to market changes.</li><li><strong>Hyperautomation:</strong> Automating as many business and IT processes as possible.</li></ul><p>Success requires not only technological investment but also a cultural shift towards embracing change and continuous learning.</p>"
+  }
+]
