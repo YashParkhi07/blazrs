@@ -98,4 +98,25 @@ document.addEventListener('DOMContentLoaded', () => {
         // Start typing loop after an initial pause
         setTimeout(type, 1500);
     }
+
+    // Nav Dropdown Click Toggle
+    const navDropdowns = document.querySelectorAll('.nav-dropdown');
+    navDropdowns.forEach(dropdown => {
+        const trigger = dropdown.querySelector('.nav-dropdown-trigger');
+        if (trigger) {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                dropdown.classList.toggle('active');
+            });
+        }
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        navDropdowns.forEach(dropdown => {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+    });
 });

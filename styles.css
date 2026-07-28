@@ -552,15 +552,15 @@ body.about-page {
     color: #ffffff !important;
 }
 
-/* Hover behaviors */
-.nav-dropdown:hover .nav-dropdown-menu,
+/* Click behaviors */
+.nav-dropdown.active .nav-dropdown-menu,
 .nav-dropdown:focus-within .nav-dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 
-.nav-dropdown:hover .dropdown-arrow {
+.nav-dropdown.active .dropdown-arrow {
     transform: rotate(180deg);
 }
 
