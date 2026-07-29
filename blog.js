@@ -93,6 +93,10 @@ document.addEventListener('DOMContentLoaded', () => {
           ${blog.content}
         </div>
       `;
+
+      if (window.mermaid) {
+        window.mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+      }
     });
   }
   

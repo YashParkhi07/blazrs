@@ -2133,3 +2133,14 @@ body.blazx-page {
         grid-template-columns: 1fr;
     }
 }
+
+/* Mermaid Diagrams */
+.mermaid {
+    background: var(--panel);
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    margin: 32px 0;
+    display: flex;
+    justify-content: center;
+}
