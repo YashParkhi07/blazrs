@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Helper to fetch blogs data
   async function fetchBlogs() {
     try {
-      // Assuming blogs.json is in the same directory
-      const response = await fetch('./blogs.json');
+      // Append a timestamp to bypass browser caching of the static JSON file
+      const response = await fetch(`./blogs.json?v=${new Date().getTime()}`);
       if (!response.ok) {
         throw new Error('Failed to load blog data.');
       }
