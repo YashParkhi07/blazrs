@@ -209,59 +209,58 @@
         <div>
           <div class="sf-badge" style="background: rgba(0,161,224,0.1); color: var(--cyan);"><span style="background: var(--cyan);"></span> Engagement Models</div>
           <h2>Transparent Pricing,<br>Measurable ROI.</h2>
-          <p class="sf-copy">Flexible and generic engagement models that apply across all our Salesforce services—from Sales Cloud implementations to advanced Agentforce AI strategies.</p>
+          <p class="sf-copy">Flexible engagement models that apply across all our Salesforce services.</p>
         </div>
       </div>
       
-      <div class="sf-list">
+      <!-- Horizontal Pricing Cards -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-top: 40px; margin-bottom: 80px;">
         
-        <div class="sf-item large">
-          <div class="sf-item-content">
-            <h4>Quickstart Implementation</h4>
-            <p style="font-size: 24px; font-weight: 600; color: var(--paper); margin: 12px 0;">Starts at $5,000 / project</p>
-            <p>Rapid deployment of standard Salesforce functionality. Perfect for teams looking to get up and running quickly with core features, basic data migration, and standard dashboards across any cloud.</p>
-          </div>
-          <div class="sf-item-capabilities">
-            <h5>What's Included</h5>
-            <ul>
-              <li>Core Setup & Configuration</li>
-              <li>Basic Data Migration</li>
-              <li>Standard Reports & Dashboards</li>
-              <li>End-User Training Sessions</li>
+        <!-- Tier 1 -->
+        <div style="background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 40px 32px; display: flex; flex-direction: column; transition: transform 0.3s ease;">
+          <h4 style="font-size: 22px; color: var(--paper); margin-bottom: 12px; font-weight: 600;">Quickstart</h4>
+          <p style="font-size: 32px; font-weight: 700; color: var(--cyan); margin-bottom: 20px;">$5,000<span style="font-size: 16px; color: var(--grey); font-weight: 400;"> / project</span></p>
+          <p style="font-size: 15px; color: var(--grey); line-height: 1.6; margin-bottom: 32px; flex-grow: 1;">Rapid deployment of standard functionality across any Salesforce cloud.</p>
+          
+          <div style="border-top: 1px solid var(--line); padding-top: 24px;">
+            <ul style="list-style: none; padding: 0; color: var(--paper); font-size: 14.5px; display: flex; flex-direction: column; gap: 12px;">
+              <li><span style="color: var(--cyan); margin-right: 8px;">✓</span> Core Setup & Configuration</li>
+              <li><span style="color: var(--cyan); margin-right: 8px;">✓</span> Basic Data Migration</li>
+              <li><span style="color: var(--cyan); margin-right: 8px;">✓</span> Standard Dashboards</li>
+              <li><span style="color: var(--cyan); margin-right: 8px;">✓</span> End-User Training</li>
             </ul>
           </div>
         </div>
 
-        <div class="sf-item large">
-          <div class="sf-item-content">
-            <h4>Managed Services</h4>
-            <p style="font-size: 24px; font-weight: 600; color: var(--paper); margin: 12px 0;">$3,500 / month</p>
-            <p>Ongoing support and continuous improvement. We act as your dedicated Salesforce administration team, handling customizations, workflow automations, and architectural strategy across your entire org.</p>
-          </div>
-          <div class="sf-item-capabilities">
-            <h5>What's Included</h5>
-            <ul>
-              <li>Dedicated Administrator</li>
-              <li>Reserved Monthly Support Hours</li>
-              <li>Custom Automations & Flows</li>
-              <li>Weekly Strategy & Review Sessions</li>
+        <!-- Tier 2 -->
+        <div style="background: var(--paper); border: 1px solid var(--paper); border-radius: 12px; padding: 40px 32px; display: flex; flex-direction: column; transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); position: relative;">
+          <div style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--cyan); color: #fff; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; padding: 6px 16px; border-radius: 20px;">Recommended</div>
+          <h4 style="font-size: 22px; color: #fff; margin-bottom: 12px; font-weight: 600;">Managed Services</h4>
+          <p style="font-size: 32px; font-weight: 700; color: var(--cyan); margin-bottom: 20px;">$3,500<span style="font-size: 16px; color: rgba(255,255,255,0.6); font-weight: 400;"> / month</span></p>
+          <p style="font-size: 15px; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 32px; flex-grow: 1;">Your dedicated remote admin team for continuous improvement.</p>
+          
+          <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px;">
+            <ul style="list-style: none; padding: 0; color: #fff; font-size: 14.5px; display: flex; flex-direction: column; gap: 12px;">
+              <li><span style="color: var(--cyan); margin-right: 8px;">✓</span> Dedicated Administrator</li>
+              <li><span style="color: var(--cyan); margin-right: 8px;">✓</span> Monthly Support Hours</li>
+              <li><span style="color: var(--cyan); margin-right: 8px;">✓</span> Custom Automations</li>
+              <li><span style="color: var(--cyan); margin-right: 8px;">✓</span> Strategy Sessions</li>
             </ul>
           </div>
         </div>
 
-        <div class="sf-item large">
-          <div class="sf-item-content">
-            <h4>Enterprise Build</h4>
-            <p style="font-size: 24px; font-weight: 600; color: var(--paper); margin: 12px 0;">Custom Pricing</p>
-            <p>Complex, multi-cloud architecture and custom development. Designed for large-scale transformations requiring API integrations, custom Apex/LWC code, and advanced Data Cloud or AI strategies.</p>
-          </div>
-          <div class="sf-item-capabilities">
-            <h5>What's Included</h5>
-            <ul>
-              <li>Multi-Cloud Integration Architecture</li>
-              <li>Custom Development (Apex, LWC)</li>
-              <li>Complex API Integrations (ERP, external apps)</li>
-              <li>Comprehensive Enterprise Governance</li>
+        <!-- Tier 3 -->
+        <div style="background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 40px 32px; display: flex; flex-direction: column; transition: transform 0.3s ease;">
+          <h4 style="font-size: 22px; color: var(--paper); margin-bottom: 12px; font-weight: 600;">Enterprise Build</h4>
+          <p style="font-size: 32px; font-weight: 700; color: var(--paper); margin-bottom: 20px;">Custom</p>
+          <p style="font-size: 15px; color: var(--grey); line-height: 1.6; margin-bottom: 32px; flex-grow: 1;">Complex, multi-cloud architecture and deep technical integrations.</p>
+          
+          <div style="border-top: 1px solid var(--line); padding-top: 24px;">
+            <ul style="list-style: none; padding: 0; color: var(--paper); font-size: 14.5px; display: flex; flex-direction: column; gap: 12px;">
+              <li><span style="color: var(--cyan); margin-right: 8px;">✓</span> Multi-Cloud Integration</li>
+              <li><span style="color: var(--cyan); margin-right: 8px;">✓</span> Custom Code (Apex, LWC)</li>
+              <li><span style="color: var(--cyan); margin-right: 8px;">✓</span> Complex API integrations</li>
+              <li><span style="color: var(--cyan); margin-right: 8px;">✓</span> AI / Agentforce Build</li>
             </ul>
           </div>
         </div>
