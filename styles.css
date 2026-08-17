@@ -22,7 +22,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: left;
+    text-align: center;
     width: 100%;
     box-sizing: border-box;
     margin: 0;
@@ -1136,7 +1136,7 @@ body.blazx-page {
     @media (max-width: 900px) {
       .hero-grid {
         grid-template-columns: 1fr;
-        text-align: left;
+        text-align: center;
       }
       .hero-actions {
         justify-content: center;
@@ -1318,7 +1318,7 @@ body.blazx-page {
 
     .sf-section-logo {
       max-width: 130px;
-      margin: 0 0 24px 0;
+      margin: 0 auto 24px;
       display: block;
     }
 
@@ -1345,15 +1345,17 @@ body.blazx-page {
     .salesforce h2 {
       font-size: clamp(28px, 3.6vw, 42px);
       color: var(--paper);
-      max-width: 15ch;
-      margin: 0;
+      max-width: 25ch;
+      margin: 0 auto;
+      text-align: center;
     }
 
     .salesforce .sf-copy {
       font-size: 15px;
       color: var(--grey);
-      max-width: 46ch;
-      margin: 16px 0 0;
+      max-width: 60ch;
+      margin: 16px auto 0;
+      text-align: center;
     }
 
     .sf-list {
@@ -1515,7 +1517,7 @@ body.blazx-page {
     /* CTA */
     .cta {
       padding: 100px 0;
-      text-align: left;
+      text-align: center;
       position: relative;
       overflow: hidden;
     }
@@ -1596,7 +1598,7 @@ body.blazx-page {
       .foot-grid {
         flex-direction: column;
         justify-content: center;
-        text-align: left;
+        text-align: center;
         gap: 24px;
       }
       .foot-logo-img {
@@ -1608,7 +1610,7 @@ body.blazx-page {
       }
       .foot-bottom {
         flex-direction: column;
-        text-align: left;
+        text-align: center;
         gap: 16px;
       }
     }

@@ -1,211 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salesforce Practice - Blazrs</title>
-  <meta name="description"
-    content="Certified Salesforce consulting, implementation, and managed services from Blazrs — Sales Cloud, Service Cloud, Marketing Cloud, Data Cloud, and Agentforce.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-
-  <header class="nav">
-    <div class="nav-inner">
-      <a href="index.html#hero"><img class="logo-img" src="logos/Blazrs Logo.png" alt="Blazrs logo"></a>
-      <nav class="links">
-        <a href="index.html#about">About</a>
-        <div class="nav-dropdown">
-          <a class="nav-dropdown-trigger" style="color:inherit; text-decoration:none;">Services</a>
-          <div class="nav-dropdown-menu">
-            <a href="salesforce.html">Salesforce</a>
-          </div>
-        </div>
-        <a href="blazx.html">Product</a>
-        <a href="blogs.html">Blogs</a>
-      </nav>
-      <a class="nav-cta" href="#cta">Get in touch</a>
-    </div>
-  </header>
-
-  <section class="svc-section" style="text-align:center; padding:120px 0 64px;">
-    <div class="wrap" style="max-width:860px;">
-      <img src="logos/salesforce-logo-removebg-preview.png" alt="Salesforce Logo" class="sf-section-logo" style="margin-bottom: 16px;">
-      <h1
-        style="font-size:clamp(32px,4vw,48px); color:var(--paper); line-height:1.1; margin:20px 0 28px; letter-spacing:-0.03em;">
-        Certified Salesforce expertise,<br>engineered for growth.</h1>
-      <div
-        style="font-size:16.5px; color:var(--grey); line-height:1.75; display:flex; flex-direction:column; gap:20px;">
-        <p>Salesforce is only as powerful as the strategy behind it. Blazrs pairs certified consultants with a
-          product mindset — we architect, build, and maintain Salesforce environments that hold up under real
-          business pressure, not just demo pressure.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="salesforce">
-    <div class="wrap">
-      <div class="sf-grid">
-        <div>
-          <div class="sf-badge"><span></span> Enterprise Architecture</div>
-          <h2>Architecting the<br>Customer 360.</h2>
-          <p class="sf-copy">We engineer unified, scalable Salesforce ecosystems. By eliminating vendor hand-offs and technical silos, we deliver resilient architectures that span Data Cloud, Marketing, Sales, and Service.</p>
-        </div>
-      </div>
-      
-      <div class="sf-list">
-        
-        <div class="sf-item large">
-          <div class="sf-item-content">
-            <h4>Sales Cloud</h4>
-            <p>Transform your sales organization with a scalable CRM platform designed to improve productivity, increase visibility, and accelerate revenue growth. We help businesses streamline every stage of the sales lifecycle—from lead capture and qualification to opportunity management, forecasting, and post-sale engagement.</p>
-            <p>Our experts design intelligent sales processes using automation, AI-powered insights, and customized dashboards that give sales leaders complete visibility into pipeline health and team performance. We also implement advanced Configure, Price, Quote (CPQ) solutions tailored to your products and pricing models, enabling your teams to generate accurate quotes faster, reduce manual effort, and shorten sales cycles.</p>
-            <p>Whether you're scaling a startup or optimizing a global sales organization, we build solutions that empower your sales teams to focus on building stronger customer relationships and closing more deals.</p>
-          </div>
-          <div class="sf-item-capabilities">
-            <h5>Key Capabilities</h5>
-            <ul>
-              <li>Lead & Opportunity Management</li>
-              <li>Sales Process Automation</li>
-              <li>AI-Powered Forecasting & Pipeline Insights</li>
-              <li>CPQ (Configure, Price, Quote) Implementation</li>
-              <li>Territory & Account Planning</li>
-              <li>Sales Dashboards & Performance Analytics</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="sf-item large">
-          <div class="sf-item-content">
-            <h4>Service Cloud</h4>
-            <p>Deliver exceptional customer support with intelligent service operations that improve response times, increase agent productivity, and enhance customer satisfaction. We help organizations implement scalable service solutions that support customers across email, chat, phone, messaging, and self-service channels.</p>
-            <p>From intelligent case routing and automated workflows to knowledge management and AI-assisted support, our solutions enable service teams to resolve issues faster while maintaining consistent customer experiences.</p>
-            <p>We also build customer portals, service analytics, and automation frameworks that reduce operational costs while improving service quality.</p>
-          </div>
-          <div class="sf-item-capabilities">
-            <h5>Key Capabilities</h5>
-            <ul>
-              <li>Intelligent Case Management</li>
-              <li>Omnichannel Customer Support</li>
-              <li>Knowledge Base & Self-Service Portals</li>
-              <li>Workflow & Approval Automation</li>
-              <li>Service Performance Dashboards</li>
-              <li>AI-Assisted Customer Support</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="sf-item large">
-          <div class="sf-item-content">
-            <h4>Marketing Cloud</h4>
-            <p>Create personalized customer experiences that strengthen relationships and drive measurable business growth. We help organizations design intelligent customer journeys that deliver relevant communications across email, SMS, push notifications, advertising, and digital channels.</p>
-            <p>Using advanced audience segmentation, automation, dynamic content, and personalization technologies, we ensure every customer interaction is timely, meaningful, and data-driven.</p>
-            <p>Our consultants optimize campaign performance through continuous testing, reporting, and journey optimization to maximize engagement, conversions, and customer lifetime value.</p>
-          </div>
-          <div class="sf-item-capabilities">
-            <h5>Key Capabilities</h5>
-            <ul>
-              <li>Customer Journey Design</li>
-              <li>Email & SMS Campaign Automation</li>
-              <li>Audience Segmentation & Personalization</li>
-              <li>AMPscript & Dynamic Content</li>
-              <li>Marketing Analytics & Reporting</li>
-              <li>Cross-Channel Campaign Orchestration</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="sf-item large">
-          <div class="sf-item-content">
-            <h4>Marketing Cloud Advanced</h4>
-            <p><strong>AI-Powered Marketing. Unified Customer Experiences. Smarter Growth.</strong></p>
-            <p>Unlock the full potential of Marketing Cloud Advanced with a consulting approach focused on transforming customer engagement into measurable business growth. We help organizations implement, optimize, and scale AI-powered marketing solutions that deliver seamless, personalized experiences across every customer touchpoint.</p>
-            <p>Our expertise includes end-to-end platform implementation, intelligent customer journey design, unified customer data through Data Cloud, cross-channel campaign automation, audience segmentation, and personalized engagement strategies.</p>
-            <p>By combining data-driven insights with continuous campaign optimization and performance analytics, we enable businesses to build stronger customer relationships, improve marketing efficiency, increase conversions, and maximize the return on every marketing investment. Every solution is designed to be scalable, future-ready, and aligned with your unique business objectives.</p>
-          </div>
-          <div class="sf-item-capabilities">
-            <h5>Key Capabilities</h5>
-            <ul>
-              <li>Marketing Cloud Advanced Implementation</li>
-              <li>AI-Powered Customer Journeys</li>
-              <li>Data Cloud Integration</li>
-              <li>Cross-Channel Marketing Automation</li>
-              <li>Audience Segmentation & Personalization</li>
-              <li>Analytics & Campaign Optimization</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="sf-item large">
-          <div class="sf-item-content">
-            <h4>Experience Cloud</h4>
-            <p>Build modern digital experiences that connect customers, partners, suppliers, and employees through secure, collaborative portals. We create branded experiences that provide easy access to information, business processes, and customer services while maintaining enterprise-grade security.</p>
-            <p>Whether you're launching a customer support portal, partner ecosystem, employee workspace, or community platform, we design scalable solutions that improve collaboration, reduce manual processes, and increase engagement.</p>
-          </div>
-          <div class="sf-item-capabilities">
-            <h5>Key Capabilities</h5>
-            <ul>
-              <li>Customer & Partner Portals</li>
-              <li>Employee Digital Workspaces</li>
-              <li>Secure Authentication & Access Control</li>
-              <li>Community Collaboration</li>
-              <li>Knowledge Sharing Platforms</li>
-              <li>Custom Experience Development</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="sf-item large">
-          <div class="sf-item-content">
-            <h4>Data Cloud</h4>
-            <p>Turn disconnected enterprise data into a unified, trusted source of intelligence. We help businesses integrate data from CRM systems, ERP platforms, marketing tools, websites, mobile applications, and external sources to create complete customer profiles.</p>
-            <p>Our data architecture and governance strategies ensure high-quality, real-time information that supports personalization, analytics, AI initiatives, and strategic decision-making across the organization.</p>
-            <p>With a unified data foundation, your business gains the agility to deliver personalized experiences while improving operational efficiency and reporting accuracy.</p>
-          </div>
-          <div class="sf-item-capabilities">
-            <h5>Key Capabilities</h5>
-            <ul>
-              <li>Customer 360 Data Unification</li>
-              <li>Identity Resolution</li>
-              <li>Data Integration & Harmonization</li>
-              <li>Real-Time Customer Segmentation</li>
-              <li>Enterprise Data Governance</li>
-              <li>Analytics & Business Intelligence</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="sf-item large">
-          <div class="sf-item-content">
-            <h4>Agentforce & AI</h4>
-            <p>Accelerate innovation with intelligent automation and enterprise AI solutions that improve productivity, enhance customer experiences, and support better business decisions. We help organizations implement AI-powered assistants, autonomous agents, and intelligent workflows that seamlessly integrate into existing business processes.</p>
-            <p>From generative AI and conversational interfaces to predictive analytics and workflow automation, we build AI solutions designed for real-world business outcomes. Every implementation follows responsible AI principles with strong governance, security, and scalability.</p>
-            <p>Our approach focuses on practical AI adoption—helping organizations automate repetitive tasks, empower employees, and deliver personalized customer experiences while maintaining trust and compliance.</p>
-          </div>
-          <div class="sf-item-capabilities">
-            <h5>Key Capabilities</h5>
-            <ul>
-              <li>AI Agents & Intelligent Assistants</li>
-              <li>Generative AI Integration</li>
-              <li>Workflow & Process Automation</li>
-              <li>Predictive Analytics & Insights</li>
-              <li>Enterprise AI Governance</li>
-              <li>Custom AI Solution Development</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-      
+html = """
       <div class="sf-grid" style="margin-top: 80px;">
         <div>
           <div class="sf-badge" style="background: rgba(0,161,224,0.1); color: var(--cyan);"><span style="background: var(--cyan);"></span> SALESFORCE SOLUTIONS</div>
@@ -215,10 +8,11 @@
       </div>
       
       <!-- Horizontal Pricing Cards -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 40px; margin-bottom: 40px; padding: 0 5%; width: 100%; box-sizing: border-box;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 40px; margin-bottom: 40px;">
         
         <!-- Ignite -->
         <div style="background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 40px 24px; display: flex; flex-direction: column; transition: transform 0.3s ease;">
+          <p style="font-size: 12px; font-weight: 700; letter-spacing: 2px; color: var(--grey); margin-bottom: 12px;">01</p>
           <h3 style="font-size: 32px; color: var(--paper); margin-bottom: 8px; font-weight: 700; letter-spacing: -1px;">Ignite</h3>
           <p style="font-size: 14px; font-weight: 600; color: var(--cyan); margin-bottom: 20px;">Focused Salesforce Implementation</p>
           <p style="font-size: 14.5px; color: var(--grey); line-height: 1.6; margin-bottom: 24px;">Start strong with a focused Salesforce implementation designed around one clear business outcome.</p>
@@ -283,6 +77,7 @@
         <!-- Elevate -->
         <div style="background: var(--paper); border: 1px solid var(--paper); border-radius: 16px; padding: 40px 24px; display: flex; flex-direction: column; transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); position: relative;">
           <div style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--cyan); color: #fff; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; padding: 6px 16px; border-radius: 20px;">Most Popular</div>
+          <p style="font-size: 12px; font-weight: 700; letter-spacing: 2px; color: rgba(255,255,255,0.5); margin-bottom: 12px;">02</p>
           <h3 style="font-size: 32px; color: #fff; margin-bottom: 8px; font-weight: 700; letter-spacing: -1px;">Elevate</h3>
           <p style="font-size: 14px; font-weight: 600; color: var(--cyan); margin-bottom: 20px;">Salesforce Growth</p>
           <p style="font-size: 14.5px; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 24px;">Connect sales, service and marketing into a unified customer journey that scales with your business.</p>
@@ -356,6 +151,7 @@
 
         <!-- Accelerate -->
         <div style="background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 40px 24px; display: flex; flex-direction: column; transition: transform 0.3s ease;">
+          <p style="font-size: 12px; font-weight: 700; letter-spacing: 2px; color: var(--grey); margin-bottom: 12px;">03</p>
           <h3 style="font-size: 32px; color: var(--paper); margin-bottom: 8px; font-weight: 700; letter-spacing: -1px;">Accelerate</h3>
           <p style="font-size: 14px; font-weight: 600; color: var(--cyan); margin-bottom: 20px;">Customer 360, Data & AI</p>
           <p style="font-size: 14.5px; color: var(--grey); line-height: 1.6; margin-bottom: 24px;">Unify customer data and activate intelligent, personalized experiences across your Salesforce ecosystem.</p>
@@ -434,6 +230,7 @@
 
         <!-- Nexus -->
         <div style="background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 40px 24px; display: flex; flex-direction: column; transition: transform 0.3s ease;">
+          <p style="font-size: 12px; font-weight: 700; letter-spacing: 2px; color: var(--grey); margin-bottom: 12px;">04</p>
           <h3 style="font-size: 32px; color: var(--paper); margin-bottom: 8px; font-weight: 700; letter-spacing: -1px;">Nexus</h3>
           <p style="font-size: 14px; font-weight: 600; color: var(--cyan); margin-bottom: 20px;">Enterprise Salesforce Transformation</p>
           <p style="font-size: 14.5px; color: var(--grey); line-height: 1.6; margin-bottom: 24px;">A complete Salesforce transformation connecting CRM, marketing, data, experience and AI at enterprise scale.</p>
@@ -518,7 +315,7 @@
       </div>
 
       <!-- Custom CTA Section -->
-      <div style="background: var(--paper); border-radius: 16px; padding: 40px; margin-bottom: 24px; display: flex; flex-direction: column; gap: 24px; width: 90%; width: 100%; box-sizing: border-box;">
+      <div style="background: var(--paper); border-radius: 16px; padding: 40px; margin-bottom: 24px; display: flex; flex-direction: column; gap: 24px;">
         <div>
           <p style="font-size: 10px; font-weight: 700; letter-spacing: 2px; color: var(--grey); margin-bottom: 12px; text-transform: uppercase;">Not sure where to start?</p>
           <h3 style="font-size: 26px; font-weight: 700; color: #fff; margin-bottom: 12px; letter-spacing: -0.5px;">Let's design the right Salesforce strategy.</h3>
@@ -528,36 +325,20 @@
       </div>
 
       <!-- Pricing Note -->
-      <div style="display: flex; gap: 12px; align-items: flex-start; padding: 0 5%; margin-bottom: 80px; width: 100%; box-sizing: border-box;">
+      <div style="display: flex; gap: 12px; align-items: flex-start; padding: 0 12px; margin-bottom: 80px;">
         <span style="color: var(--paper); font-weight: 700; font-size: 14px;">*</span>
         <p style="margin: 0; color: var(--grey); font-size: 12px; line-height: 1.6;">Starting prices are indicative and intended for standard implementations. Final pricing depends on scope, complexity, integrations, data volume, customization and implementation requirements. Salesforce licenses, third-party products and external platform costs are not included.</p>
       </div>
+"""
 
-  <section class="cta" id="cta">
-    <div class="wrap">
-      <h2>Let's light the <span class="accent">fuse.</span></h2>
-      <p>Automate and simplify your business operations with intelligent, scalable solutions.</p>
-      <a class="btn-solid" href="mailto:theblazrs@gmail.com">theblazrs@gmail.com</a>
-    </div>
-  </section>
+import re
 
-  <footer>
-    <div class="wrap">
-      <div class="foot-grid">
+with open("salesforce.html", "r") as f:
+    content = f.read()
 
+# Replace everything from <div class="sf-grid" style="margin-top: 80px;"> up to <section class="cta" id="cta">
+pattern = r'<div class="sf-grid" style="margin-top: 80px;">.*?<section class="cta" id="cta">'
+new_content = re.sub(pattern, html + '\n  <section class="cta" id="cta">', content, flags=re.DOTALL)
 
-      </div>
-      <div class="foot-bottom">
-        <span>© 2026 Blazrs. Innovation that adapts.</span>
-        <span><a href="https://www.linkedin.com/company/blazrs/" target="_blank" style="color:inherit;text-decoration:none;">LinkedIn</a> · <a href="https://www.instagram.com/_blazrs?igsh=YWJqMjhtaDF4eWsx" target="_blank" style="color:inherit;text-decoration:none;">Instagram</a></span>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-
-  
-
-</body>
-
-</html>
+with open("salesforce.html", "w") as f:
+    f.write(new_content)
