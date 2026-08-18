@@ -1,12 +1,9 @@
 {
   "name": "blazrs-website",
   "version": "1.0.0",
-  "description": "Blazrs static website served via Express",
+  "description": "Blazrs static website served via native Node.js",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
-  },
-  "dependencies": {
-    "express": "^4.18.2"
   }
 }
