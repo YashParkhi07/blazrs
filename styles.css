@@ -1554,6 +1554,7 @@ body.blazx-page {
     footer {
       padding: 44px 0 30px;
       border-top: 1px solid var(--line);
+      background-color: #0A1128;
     }
 
     .foot-grid {
