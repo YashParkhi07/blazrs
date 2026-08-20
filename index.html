@@ -381,6 +381,75 @@
       transform: scale(1);
     }
 
+  
+    /* Principles Accordion Styles */
+    .principles-accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .orb-accordion-item {
+      border: 1px solid rgba(0, 161, 224, 0.15);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .orb-accordion-item.open {
+      border-color: rgba(0, 161, 224, 0.4);
+      background: rgba(0, 161, 224, 0.05);
+      box-shadow: 0 4px 15px rgba(0, 161, 224, 0.1);
+    }
+    .orb-accordion-trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 1.2rem 1.5rem;
+      background: none;
+      border: none;
+      color: var(--text-primary);
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      font-family: inherit;
+      transition: color 0.3s ease;
+    }
+    .orb-acc-num {
+      color: var(--primary);
+      margin-right: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+    .orb-acc-icon {
+      margin-left: auto;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--primary);
+      transition: transform 0.3s ease;
+    }
+    .orb-accordion-item.open .orb-acc-icon {
+      transform: rotate(45deg);
+    }
+    .orb-accordion-item.open .orb-accordion-trigger {
+      color: var(--primary);
+    }
+    .orb-accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out;
+    }
+    .orb-accordion-item.open .orb-accordion-content {
+      max-height: 200px;
+    }
+    .orb-accordion-inner {
+      padding: 0 1.5rem 1.5rem 1.5rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
   </style>
 
   <div id="about">
@@ -388,7 +457,9 @@
     <!-- MERGED SECTION: Why Blazrs Exists, Core Beliefs, What Drives Us -->
     <section class="mission-section" style="padding-top: 4rem;">
       <div class="mission-container">
-        <div class="mission-grid" style="margin-bottom: 5rem;">
+
+        <div class="mission-grid" style="align-items: start; gap: 4rem;">
+
           <div class="mission-text">
             <div class="section-label">Our Mission</div>
             <h2>Why Blazrs exists</h2>
@@ -397,25 +468,97 @@
             <h3 style="margin-top: 2rem; font-size: 1.8rem; margin-bottom: 1rem; line-height: 1.2; color: var(--text-primary);">The Core Belief</h3>
             <p>Great technology isn't built in isolation. It comes from understanding real challenges, thinking beyond conventional solutions, and staying focused on creating meaningful outcomes.</p>
             <p>At Blazrs, everything we do is driven by one simple belief: <strong>technology should create progress, not just functionality.</strong></p>
-          </div>
-          <div class="mission-visual">
-            <div class="morph-shape"></div>
-            <div class="morph-shape"></div>
-            <div class="morph-shape"></div>
-          </div>
-        </div>
-      </div>
 
-      <div class="mission-container">
-        <div class="section-header">
-          <div class="section-label">Core Principles</div>
-          <h2>What Drives Us</h2>
-          <p>These eight fundamental principles guide our decisions and define how we partner with our clients</p>
-        </div>
-        
-                <div class="orbital-layout">
-          <!-- Orbital Wheel -->
-          <div class="orbital-wheel-container">
+            <div class="principles-accordion" style="margin-top: 4rem;">
+              <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--text-primary);">What Drives Us</h3>
+              
+              <div class="orb-accordion-item open" data-index="0">
+                <button class="orb-accordion-trigger">
+                  <span class="orb-acc-num">01</span> We Start With Understanding
+                  <span class="orb-acc-icon">+</span>
+                </button>
+                <div class="orb-accordion-content">
+                  <div class="orb-accordion-inner">Every business is different, and so are its challenges. We take the time to understand your goals, processes, customers, and pain points before we begin building. This helps us create solutions that are relevant, practical, and aligned with your vision.</div>
+                </div>
+              </div>
+
+              <div class="orb-accordion-item" data-index="1">
+                <button class="orb-accordion-trigger">
+                  <span class="orb-acc-num">02</span> We Solve Real Problems
+                  <span class="orb-acc-icon">+</span>
+                </button>
+                <div class="orb-accordion-content">
+                  <div class="orb-accordion-inner">We don't build technology simply because we can. We focus on identifying the problems that matter most and developing solutions that make businesses more efficient, competitive, and capable of growth.</div>
+                </div>
+              </div>
+
+              <div class="orb-accordion-item" data-index="2">
+                <button class="orb-accordion-trigger">
+                  <span class="orb-acc-num">03</span> We Turn Ideas Into Possibilities
+                  <span class="orb-acc-icon">+</span>
+                </button>
+                <div class="orb-accordion-content">
+                  <div class="orb-accordion-inner">Great ideas need the right technology and execution to become reality. We transform concepts into thoughtfully designed digital products, platforms, and experiences that can move from an idea on paper to something people actually use.</div>
+                </div>
+              </div>
+
+              <div class="orb-accordion-item" data-index="3">
+                <button class="orb-accordion-trigger">
+                  <span class="orb-acc-num">04</span> We Push Boundaries
+                  <span class="orb-acc-icon">+</span>
+                </button>
+                <div class="orb-accordion-content">
+                  <div class="orb-accordion-inner">We constantly challenge the usual way of doing things. By combining technology, creativity, and strategic thinking, we look for smarter approaches that can unlock new opportunities and give our clients an edge.</div>
+                </div>
+              </div>
+
+              <div class="orb-accordion-item" data-index="4">
+                <button class="orb-accordion-trigger">
+                  <span class="orb-acc-num">05</span> We Build With Purpose
+                  <span class="orb-acc-icon">+</span>
+                </button>
+                <div class="orb-accordion-content">
+                  <div class="orb-accordion-inner">Every feature, decision, and line of work should contribute to a larger objective. We focus on building solutions that are scalable, sustainable, user-focused, and capable of delivering value well beyond launch.</div>
+                </div>
+              </div>
+
+              <div class="orb-accordion-item" data-index="5">
+                <button class="orb-accordion-trigger">
+                  <span class="orb-acc-num">06</span> We Care About Outcomes
+                  <span class="orb-acc-icon">+</span>
+                </button>
+                <div class="orb-accordion-content">
+                  <div class="orb-accordion-inner">Delivering a product is only the beginning. What matters is what that product enables—faster operations, better customer experiences, increased efficiency, new revenue opportunities, or sustainable business growth.</div>
+                </div>
+              </div>
+
+              <div class="orb-accordion-item" data-index="6">
+                <button class="orb-accordion-trigger">
+                  <span class="orb-acc-num">07</span> Long-Term Partnerships
+                  <span class="orb-acc-icon">+</span>
+                </button>
+                <div class="orb-accordion-content">
+                  <div class="orb-accordion-inner">We don't see ourselves as just another technology vendor. We work alongside our clients as partners, collaborating closely, adapting to their evolving needs, and continuously looking for ways to create more value.</div>
+                </div>
+              </div>
+
+              <div class="orb-accordion-item" data-index="7">
+                <button class="orb-accordion-trigger">
+                  <span class="orb-acc-num">08</span> Your Success Is Our Success
+                  <span class="orb-acc-icon">+</span>
+                </button>
+                <div class="orb-accordion-content">
+                  <div class="orb-accordion-inner">Our biggest measure of success is the progress we help create for your business. When you grow, improve, and achieve more, we grow with you. That alignment is at the heart of everything Blazrs does.</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+          <div class="mission-visual" style="position: sticky; top: 120px; align-self: start; display: flex; justify-content: center;">
+            <div class="orbital-layout" style="margin-top: 0;">
+              <div class="orbital-wheel-container">
             <div class="orbital-wheel">
               <div class="orbital-center">
                 <h3>Our<br>Core<br>Values</h3>
@@ -474,17 +617,8 @@
               </div>
             </div>
           </div>
-          
-          <!-- Orbital Content Panel -->
-          <div class="orbital-content-panel">
-            <div class="pillar-number" id="orb-num">01</div>
-            <h3 class="pillar-title" id="orb-title" style="font-size: 2rem; margin-bottom: 1rem; color: var(--text-primary);">We Start With Understanding</h3>
-            <p class="pillar-description" id="orb-desc" style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary);">Every business is different, and so are its challenges. We take the time to understand your goals, processes, customers, and pain points before we begin building. This helps us create solutions that are relevant, practical, and aligned with your vision.</p>
-          </div>
-        </div>
 
-      </div>
-    
+        </div>
 
       </div>
     </section>
@@ -694,101 +828,56 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
-  // Orbital Animation Logic
-  const orbitalData = [
-    {
-      num: "01",
-      title: "We Start With Understanding",
-      desc: "Every business is different, and so are its challenges. We take the time to understand your goals, processes, customers, and pain points before we begin building. This helps us create solutions that are relevant, practical, and aligned with your vision."
-    },
-    {
-      num: "02",
-      title: "We Solve Real Problems",
-      desc: "We don't build technology simply because we can. We focus on identifying the problems that matter most and developing solutions that make businesses more efficient, competitive, and capable of growth."
-    },
-    {
-      num: "03",
-      title: "We Turn Ideas Into Possibilities",
-      desc: "Great ideas need the right technology and execution to become reality. We transform concepts into thoughtfully designed digital products, platforms, and experiences that can move from an idea on paper to something people actually use."
-    },
-    {
-      num: "04",
-      title: "We Push Boundaries",
-      desc: "We constantly challenge the usual way of doing things. By combining technology, creativity, and strategic thinking, we look for smarter approaches that can unlock new opportunities and give our clients an edge."
-    },
-    {
-      num: "05",
-      title: "We Build With Purpose",
-      desc: "Every feature, decision, and line of work should contribute to a larger objective. We focus on building solutions that are scalable, sustainable, user-focused, and capable of delivering value well beyond launch."
-    },
-    {
-      num: "06",
-      title: "We Care About Outcomes",
-      desc: "Delivering a product is only the beginning. What matters is what that product enables—faster operations, better customer experiences, increased efficiency, new revenue opportunities, or sustainable business growth."
-    },
-    {
-      num: "07",
-      title: "Long-Term Partnerships",
-      desc: "We don't see ourselves as just another technology vendor. We work alongside our clients as partners, collaborating closely, adapting to their evolving needs, and continuously looking for ways to create more value."
-    },
-    {
-      num: "08",
-      title: "Your Success Is Our Success",
-      desc: "Our biggest measure of success is the progress we help create for your business. When you grow, improve, and achieve more, we grow with you. That alignment is at the heart of everything Blazrs does."
-    }
-  ];
-
+  
+  // Sync Orbital Animation with Accordion
   const nodes = document.querySelectorAll('.orbital-node');
-  const orbNum = document.getElementById('orb-num');
-  const orbTitle = document.getElementById('orb-title');
-  const orbDesc = document.getElementById('orb-desc');
-  const panel = document.querySelector('.orbital-content-panel');
-
+  const accItems = document.querySelectorAll('.orb-accordion-item');
   let activeIndex = 0;
   let autoRotateInterval;
 
-  function updateOrbitalContent(index) {
-    if(!orbNum) return;
+  function setOrbitalActive(index) {
+    if (index >= accItems.length) return;
     
-    // Fade out
-    panel.style.opacity = 0;
+    // Reset all
+    nodes.forEach(n => n.classList.remove('active'));
+    accItems.forEach(item => item.classList.remove('open'));
     
-    setTimeout(() => {
-      // Remove active class from all
-      nodes.forEach(n => n.classList.remove('active'));
-      // Add active class to current
-      if(nodes[index]) nodes[index].classList.add('active');
-      
-      // Update text
-      orbNum.textContent = orbitalData[index].num;
-      orbTitle.textContent = orbitalData[index].title;
-      orbDesc.textContent = orbitalData[index].desc;
-      
-      // Fade in
-      panel.style.opacity = 1;
-    }, 300);
+    // Activate target
+    if(nodes[index]) nodes[index].classList.add('active');
+    if(accItems[index]) accItems[index].classList.add('open');
   }
 
-  // Handle Hover and Click
+  // Handle Wheel Hover/Click
   nodes.forEach((node) => {
     ['mouseenter', 'click'].forEach(evt => {
       node.addEventListener(evt, (e) => {
         const index = parseInt(node.getAttribute('data-index'));
         if (activeIndex !== index) {
           activeIndex = index;
-          updateOrbitalContent(activeIndex);
+          setOrbitalActive(activeIndex);
         }
-        // Stop auto rotation when interacting
-        clearInterval(autoRotateInterval);
+        clearInterval(autoRotateInterval); // Stop auto cycle on interact
       });
     });
   });
 
-  // Optional: Auto cycle through the items every 8 seconds
+  // Handle Accordion Click
+  accItems.forEach((item) => {
+    const trigger = item.querySelector('.orb-accordion-trigger');
+    trigger.addEventListener('click', () => {
+      const index = parseInt(item.getAttribute('data-index'));
+      activeIndex = index;
+      setOrbitalActive(activeIndex);
+      clearInterval(autoRotateInterval);
+    });
+  });
+
+  // Auto cycle
   autoRotateInterval = setInterval(() => {
-    activeIndex = (activeIndex + 1) % orbitalData.length;
-    updateOrbitalContent(activeIndex);
+    activeIndex = (activeIndex + 1) % accItems.length;
+    setOrbitalActive(activeIndex);
   }, 8000);
+
 
 
   // Timeline Scroll Animation Observer
