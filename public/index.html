@@ -228,9 +228,11 @@
     }
 
     @media (max-width: 768px) {
-      .mission-grid, .timeline::before { display: none; }
+      .mission-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .timeline::before { display: none; }
       .mission-text, .timeline-item { width: 100%; text-align: left !important; padding-right: 0 !important; padding-left: 0 !important; }
       .section-header h2 { font-size: 1.8rem; }
+      .mission-visual { position: relative; top: 0 !important; margin-top: 2rem; }
     }
   
     /* Orbital Layout Styles */

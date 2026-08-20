@@ -1097,6 +1097,12 @@ body.blazx-page {
       background: var(--lime);
     }
 
+    footer {
+      padding: 44px 0 30px;
+      border-top: 1px solid var(--line);
+      background-color: #00A1E0;
+    }
+
     @media (max-width:900px) {
       .nav-inner {
         flex-wrap: wrap;
@@ -1295,6 +1301,12 @@ body.blazx-page {
       color: var(--grey);
     }
 
+    footer {
+      padding: 44px 0 30px;
+      border-top: 1px solid var(--line);
+      background-color: #00A1E0;
+    }
+
     @media (max-width:900px) {
       .product-grid {
         grid-template-columns: 1fr;
@@ -1436,6 +1448,12 @@ body.blazx-page {
       font-weight: bold;
     }
 
+    footer {
+      padding: 44px 0 30px;
+      border-top: 1px solid var(--line);
+      background-color: #00A1E0;
+    }
+
     @media (max-width:900px) {
       .sf-grid {
         grid-template-columns: 1fr;
@@ -1506,6 +1524,12 @@ body.blazx-page {
       padding-top: 12px;
       display: flex;
       justify-content: space-between;
+    }
+
+    footer {
+      padding: 44px 0 30px;
+      border-top: 1px solid var(--line);
+      background-color: #00A1E0;
     }
 
     @media (max-width:900px) {
@@ -1678,6 +1702,12 @@ body.blazx-page {
     height: 28px;
     z-index: 1;
   }
+    footer {
+      padding: 44px 0 30px;
+      border-top: 1px solid var(--line);
+      background-color: #00A1E0;
+    }
+
   @media (max-width:900px) {
     .flow-diagram {
       flex-direction: column;
@@ -1730,6 +1760,12 @@ body.blazx-page {
 
     .svc-mt {
       margin-top: 40px;
+    }
+
+    footer {
+      padding: 44px 0 30px;
+      border-top: 1px solid var(--line);
+      background-color: #00A1E0;
     }
 
     @media (max-width:900px) {
