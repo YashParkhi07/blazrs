@@ -232,6 +232,135 @@
       .mission-text, .timeline-item { width: 100%; text-align: left !important; padding-right: 0 !important; padding-left: 0 !important; }
       .section-header h2 { font-size: 1.8rem; }
     }
+  
+    /* Orbital Layout Styles */
+    .orbital-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin-top: 3rem;
+    }
+    @media (min-width: 900px) {
+      .orbital-layout {
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+      }
+    }
+    
+    .orbital-wheel-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 0;
+    }
+    
+    .orbital-wheel {
+      position: relative;
+      width: 320px;
+      height: 320px;
+    }
+    @media (min-width: 900px) {
+      .orbital-wheel {
+        width: 400px;
+        height: 400px;
+      }
+    }
+    
+    .orbital-track {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      border: 1px dashed rgba(0, 161, 224, 0.4);
+      animation: orbitRotate 40s linear infinite;
+    }
+    /* Pause animation when interacting */
+    .orbital-wheel:hover .orbital-track,
+    .orbital-wheel:hover .orbital-node {
+      animation-play-state: paused;
+    }
+    
+    .orbital-center {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 140px; height: 140px;
+      background: radial-gradient(circle at top left, var(--cyan), #0056b3);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      box-shadow: 0 0 30px rgba(0, 161, 224, 0.5);
+      z-index: 10;
+    }
+    .orbital-center h3 {
+      font-size: 1.2rem;
+      line-height: 1.2;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    
+    .node-wrapper {
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 60px; height: 60px;
+      margin-top: -30px; margin-left: -30px;
+      /* Rotate outward, translate by radius (160px on mobile, 200px on desktop) */
+      transform: rotate(var(--angle)) translateY(-160px) rotate(calc(-1 * var(--angle)));
+      z-index: 20;
+    }
+    @media (min-width: 900px) {
+      .node-wrapper {
+        transform: rotate(var(--angle)) translateY(-200px) rotate(calc(-1 * var(--angle)));
+      }
+    }
+    
+    .orbital-node {
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      background: white;
+      border: 2px solid var(--cyan);
+      color: var(--cyan);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      /* Counter-rotate so icons stay upright */
+      animation: counterRotate 40s linear infinite;
+    }
+    .orbital-node svg {
+      width: 24px; height: 24px;
+    }
+    .orbital-node.active, .orbital-node:hover {
+      background: var(--cyan);
+      color: white;
+      transform: scale(1.25);
+      box-shadow: 0 8px 20px rgba(0, 161, 224, 0.4);
+    }
+    
+    .orbital-content-panel {
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+    
+    @keyframes orbitRotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes counterRotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(-360deg); }
+    }
+
   </style>
 
   <div id="about">
@@ -358,57 +487,77 @@
           <p>These eight fundamental principles guide our decisions and define how we partner with our clients</p>
         </div>
 
-        <div class="pillars-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        
+        <div class="orbital-layout">
+          <!-- Orbital Wheel -->
+          <div class="orbital-wheel-container">
+            <div class="orbital-wheel">
+              <div class="orbital-center">
+                <h3>Our<br>Core<br>Values</h3>
+              </div>
+              <div class="orbital-track">
+                
+                <!-- Node 1 -->
+                <div class="node-wrapper" style="--angle: 0deg;">
+                  <div class="orbital-node active" data-index="0">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  </div>
+                </div>
+                <!-- Node 2 -->
+                <div class="node-wrapper" style="--angle: 45deg;">
+                  <div class="orbital-node" data-index="1">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path><path d="M2 12h20"></path></svg>
+                  </div>
+                </div>
+                <!-- Node 3 -->
+                <div class="node-wrapper" style="--angle: 90deg;">
+                  <div class="orbital-node" data-index="2">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                  </div>
+                </div>
+                <!-- Node 4 -->
+                <div class="node-wrapper" style="--angle: 135deg;">
+                  <div class="orbital-node" data-index="3">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="2" x2="12" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line><line x1="4.93" y1="19.07" x2="19.07" y2="4.93"></line></svg>
+                  </div>
+                </div>
+                <!-- Node 5 -->
+                <div class="node-wrapper" style="--angle: 180deg;">
+                  <div class="orbital-node" data-index="4">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  </div>
+                </div>
+                <!-- Node 6 -->
+                <div class="node-wrapper" style="--angle: 225deg;">
+                  <div class="orbital-node" data-index="5">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  </div>
+                </div>
+                <!-- Node 7 -->
+                <div class="node-wrapper" style="--angle: 270deg;">
+                  <div class="orbital-node" data-index="6">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  </div>
+                </div>
+                <!-- Node 8 -->
+                <div class="node-wrapper" style="--angle: 315deg;">
+                  <div class="orbital-node" data-index="7">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
           
-          <div class="pillar">
-            <div class="pillar-number">01</div>
-            <h3 class="pillar-title">We Start With Understanding</h3>
-            <p class="pillar-description">Every business is different, and so are its challenges. We take the time to understand your goals, processes, customers, and pain points before we begin building. This helps us create solutions that are relevant, practical, and aligned with your vision.</p>
+          <!-- Orbital Content Panel -->
+          <div class="orbital-content-panel">
+            <div class="pillar-number" id="orb-num">01</div>
+            <h3 class="pillar-title" id="orb-title" style="font-size: 2rem; margin-bottom: 1rem; color: var(--text-primary);">We Start With Understanding</h3>
+            <p class="pillar-description" id="orb-desc" style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary);">Every business is different, and so are its challenges. We take the time to understand your goals, processes, customers, and pain points before we begin building. This helps us create solutions that are relevant, practical, and aligned with your vision.</p>
           </div>
-
-          <div class="pillar">
-            <div class="pillar-number">02</div>
-            <h3 class="pillar-title">We Solve Real Problems</h3>
-            <p class="pillar-description">We don't build technology simply because we can. We focus on identifying the problems that matter most and developing solutions that make businesses more efficient, competitive, and capable of growth.</p>
-          </div>
-
-          <div class="pillar">
-            <div class="pillar-number">03</div>
-            <h3 class="pillar-title">We Turn Ideas Into Possibilities</h3>
-            <p class="pillar-description">Great ideas need the right technology and execution to become reality. We transform concepts into thoughtfully designed digital products, platforms, and experiences that can move from an idea on paper to something people actually use.</p>
-          </div>
-
-          <div class="pillar">
-            <div class="pillar-number">04</div>
-            <h3 class="pillar-title">We Push Boundaries</h3>
-            <p class="pillar-description">We constantly challenge the usual way of doing things. By combining technology, creativity, and strategic thinking, we look for smarter approaches that can unlock new opportunities and give our clients an edge.</p>
-          </div>
-
-          <div class="pillar">
-            <div class="pillar-number">05</div>
-            <h3 class="pillar-title">We Build With Purpose</h3>
-            <p class="pillar-description">Every feature, decision, and line of work should contribute to a larger objective. We focus on building solutions that are scalable, sustainable, user-focused, and capable of delivering value well beyond launch.</p>
-          </div>
-
-          <div class="pillar">
-            <div class="pillar-number">06</div>
-            <h3 class="pillar-title">We Care About Outcomes</h3>
-            <p class="pillar-description">Delivering a product is only the beginning. What matters is what that product enables—faster operations, better customer experiences, increased efficiency, new revenue opportunities, or sustainable business growth.</p>
-          </div>
-
-          <div class="pillar">
-            <div class="pillar-number">07</div>
-            <h3 class="pillar-title">Long-Term Partnerships</h3>
-            <p class="pillar-description">We don't see ourselves as just another technology vendor. We work alongside our clients as partners, collaborating closely, adapting to their evolving needs, and continuously looking for ways to create more value.</p>
-          </div>
-
-          <div class="pillar">
-            <div class="pillar-number">08</div>
-            <h3 class="pillar-title">Your Success Is Our Success</h3>
-            <p class="pillar-description">Our biggest measure of success is the progress we help create for your business. When you grow, improve, and achieve more, we grow with you. That alignment is at the heart of everything Blazrs does.</p>
-          </div>
-
         </div>
+
       </div>
     </section>
 
@@ -547,6 +696,103 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
+
+  // Orbital Animation Logic
+  const orbitalData = [
+    {
+      num: "01",
+      title: "We Start With Understanding",
+      desc: "Every business is different, and so are its challenges. We take the time to understand your goals, processes, customers, and pain points before we begin building. This helps us create solutions that are relevant, practical, and aligned with your vision."
+    },
+    {
+      num: "02",
+      title: "We Solve Real Problems",
+      desc: "We don't build technology simply because we can. We focus on identifying the problems that matter most and developing solutions that make businesses more efficient, competitive, and capable of growth."
+    },
+    {
+      num: "03",
+      title: "We Turn Ideas Into Possibilities",
+      desc: "Great ideas need the right technology and execution to become reality. We transform concepts into thoughtfully designed digital products, platforms, and experiences that can move from an idea on paper to something people actually use."
+    },
+    {
+      num: "04",
+      title: "We Push Boundaries",
+      desc: "We constantly challenge the usual way of doing things. By combining technology, creativity, and strategic thinking, we look for smarter approaches that can unlock new opportunities and give our clients an edge."
+    },
+    {
+      num: "05",
+      title: "We Build With Purpose",
+      desc: "Every feature, decision, and line of work should contribute to a larger objective. We focus on building solutions that are scalable, sustainable, user-focused, and capable of delivering value well beyond launch."
+    },
+    {
+      num: "06",
+      title: "We Care About Outcomes",
+      desc: "Delivering a product is only the beginning. What matters is what that product enables—faster operations, better customer experiences, increased efficiency, new revenue opportunities, or sustainable business growth."
+    },
+    {
+      num: "07",
+      title: "Long-Term Partnerships",
+      desc: "We don't see ourselves as just another technology vendor. We work alongside our clients as partners, collaborating closely, adapting to their evolving needs, and continuously looking for ways to create more value."
+    },
+    {
+      num: "08",
+      title: "Your Success Is Our Success",
+      desc: "Our biggest measure of success is the progress we help create for your business. When you grow, improve, and achieve more, we grow with you. That alignment is at the heart of everything Blazrs does."
+    }
+  ];
+
+  const nodes = document.querySelectorAll('.orbital-node');
+  const orbNum = document.getElementById('orb-num');
+  const orbTitle = document.getElementById('orb-title');
+  const orbDesc = document.getElementById('orb-desc');
+  const panel = document.querySelector('.orbital-content-panel');
+
+  let activeIndex = 0;
+  let autoRotateInterval;
+
+  function updateOrbitalContent(index) {
+    if(!orbNum) return;
+    
+    // Fade out
+    panel.style.opacity = 0;
+    
+    setTimeout(() => {
+      // Remove active class from all
+      nodes.forEach(n => n.classList.remove('active'));
+      // Add active class to current
+      if(nodes[index]) nodes[index].classList.add('active');
+      
+      // Update text
+      orbNum.textContent = orbitalData[index].num;
+      orbTitle.textContent = orbitalData[index].title;
+      orbDesc.textContent = orbitalData[index].desc;
+      
+      // Fade in
+      panel.style.opacity = 1;
+    }, 300);
+  }
+
+  // Handle Hover and Click
+  nodes.forEach((node) => {
+    ['mouseenter', 'click'].forEach(evt => {
+      node.addEventListener(evt, (e) => {
+        const index = parseInt(node.getAttribute('data-index'));
+        if (activeIndex !== index) {
+          activeIndex = index;
+          updateOrbitalContent(activeIndex);
+        }
+        // Stop auto rotation when interacting
+        clearInterval(autoRotateInterval);
+      });
+    });
+  });
+
+  // Optional: Auto cycle through the items every 8 seconds
+  autoRotateInterval = setInterval(() => {
+    activeIndex = (activeIndex + 1) % orbitalData.length;
+    updateOrbitalContent(activeIndex);
+  }, 8000);
+
 </script>
 
 </body>
