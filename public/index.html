@@ -452,13 +452,62 @@
       font-size: 0.95rem;
     }
 
+  
+    .full-width-container {
+      max-width: 100% !important;
+      padding: 0 4rem !important;
+    }
+    .mission-grid {
+      grid-template-columns: 1.5fr 1fr !important;
+    }
+    @media (max-width: 1024px) {
+      .full-width-container { padding: 0 2rem !important; }
+      .mission-grid { grid-template-columns: 1fr !important; }
+    }
+    
+    /* 4-Column Horizontal Values Grid */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .value-box {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(0, 161, 224, 0.2);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .value-box:hover {
+      transform: translateY(-5px);
+      border-color: rgba(0, 161, 224, 0.6);
+      background: rgba(0, 161, 224, 0.05);
+    }
+    .value-box h3 {
+      font-size: 1.4rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    .value-box p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    @media (max-width: 1024px) {
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .values-grid { grid-template-columns: 1fr; }
+    }
+
   </style>
 
   <div id="about">
 
     <!-- MERGED SECTION: Why Blazrs Exists, Core Beliefs, What Drives Us -->
     <section class="mission-section" style="padding-top: 4rem;">
-      <div class="mission-container">
+      <div class="mission-container full-width-container">
 
         <div class="mission-grid" style="align-items: start; gap: 4rem;">
 
@@ -665,41 +714,28 @@
           <p>These aren't just words on a wall—they're the fundamental laws of how we operate, make critical decisions, and build lasting relationships with our clients</p>
         </div>
 
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3 class="timeline-title">Customer Obsession</h3>
-              <p class="timeline-description">We don't start with technology; we start with you. We begin every project by immersing ourselves entirely in your business model, your market challenges, and your ultimate goals. Your roadblocks become our roadblocks. Your wins become our wins. We proactively anticipate your needs and build intuitive, frictionless experiences that delight both your internal teams and your end customers, ensuring every solution we deliver is precisely tailored to propel you forward.</p>
-            </div>
+        
+        <div class="values-grid">
+          <div class="value-box">
+            <h3>Customer Obsession</h3>
+            <p>We don't start with technology; we start with you. We begin every project by immersing ourselves entirely in your business model, your market challenges, and your ultimate goals. Your roadblocks become our roadblocks. Your wins become our wins. We proactively anticipate your needs and build intuitive, frictionless experiences that delight both your internal teams and your end customers, ensuring every solution we deliver is precisely tailored to propel you forward.</p>
           </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3 class="timeline-title">Radical Honesty</h3>
-              <p class="timeline-description">We will always tell you what we truly think, not simply what you want to hear. If a proposed strategy won't yield the ROI you expect, or if a requested feature is unnecessarily complex, we will explicitly say so—and immediately offer smarter, more efficient alternatives. We believe that true partnership and unshakeable trust are built entirely on transparency, direct communication, and a shared commitment to finding the absolute best path forward, even if it requires difficult conversations.</p>
-            </div>
+          <div class="value-box">
+            <h3>Radical Honesty</h3>
+            <p>We will always tell you what we truly think, not simply what you want to hear. If a proposed strategy won't yield the ROI you expect, or if a requested feature is unnecessarily complex, we will explicitly say so—and immediately offer smarter, more efficient alternatives. We believe that true partnership and unshakeable trust are built entirely on transparency, direct communication, and a shared commitment to finding the absolute best path forward, even if it requires difficult conversations.</p>
           </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3 class="timeline-title">Relentless Quality</h3>
-              <p class="timeline-description">Excellence is not a milestone for us; it is a non-negotiable baseline. From the underlying code architecture we deploy, to the pixel-perfect interfaces we design, down to the clarity of our daily communication, we maintain uncompromising standards at every single touchpoint. We know that small details compound over time, so we rigorously test, audit, and refine our deliverables to ensure they are secure, scalable, and built to withstand the pressures of a rapidly evolving digital ecosystem.</p>
-            </div>
+          <div class="value-box">
+            <h3>Relentless Quality</h3>
+            <p>Excellence is not a milestone for us; it is a non-negotiable baseline. From the underlying code architecture we deploy, to the pixel-perfect interfaces we design, down to the clarity of our daily communication, we maintain uncompromising standards at every single touchpoint. We know that small details compound over time, so we rigorously test, audit, and refine our deliverables to ensure they are secure, scalable, and built to withstand the pressures of a rapidly evolving digital ecosystem.</p>
           </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3 class="timeline-title">Always Learning</h3>
-              <p class="timeline-description">Technology evolves at a blistering pace, and resting on past knowledge is a recipe for obsolescence. We aggressively invest our time and resources into staying ahead of global trends, mastering emerging tools, and deepening our technical expertise across artificial intelligence, cloud infrastructure, and modern enterprise strategy. By continuously sharpening our own skills, we ensure that you are always armed with cutting-edge capabilities and innovative methodologies that keep you miles ahead of your competition.</p>
-            </div>
+          <div class="value-box">
+            <h3>Always Learning</h3>
+            <p>Technology evolves at a blistering pace, and resting on past knowledge is a recipe for obsolescence. We aggressively invest our time and resources into staying ahead of global trends, mastering emerging tools, and deepening our technical expertise across artificial intelligence, cloud infrastructure, and modern enterprise strategy. By continuously sharpening our own skills, we ensure that you are always armed with cutting-edge capabilities and innovative methodologies that keep you miles ahead of your competition.</p>
           </div>
         </div>
       </div>
     </section>
+
 <section class="m-cta-section" style="padding-top: 4rem;">
       <div class="mission-container">
         <div class="section-label" style="font-size: 0.85rem; color: var(--primary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.5rem; font-weight: 600;">Why Blazrs?</div>
@@ -737,7 +773,7 @@
 
   
 
-    <footer>
+    <footer style="background-color: #00A1E0; border-top: none;">
     <div class="wrap">
       <div class="foot-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; text-align: left;">
         
