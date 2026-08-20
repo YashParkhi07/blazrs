@@ -1,36 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+import re
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Mission | Blazrs</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/png" href="logos/Blazrs Logo.png">
-</head>
+# 1. Get Blazrs header and footer from index.html
+with open('index.html', 'r') as f:
+    index_html = f.read()
 
-<body>
+# Extract from <!DOCTYPE html> to </header>
+header_match = re.search(r'(<!DOCTYPE html>.*?</header>)', index_html, re.DOTALL)
+blazrs_header = header_match.group(1)
 
-  <header class="nav">
-    <div class="nav-inner">
-      <a href="index.html#hero"><img class="logo-img" src="logos/Blazrs Logo.png" alt="Blazrs logo"></a>
-      <nav class="links">
-        <a href="#about">About</a>
-        <div class="nav-dropdown">
-          <a class="nav-dropdown-trigger" style="color:inherit; text-decoration:none;">Services</a>
-          <div class="nav-dropdown-menu">
-            <a href="salesforce.html">Salesforce</a>
-          </div>
-        </div>
-        <a href="blazx.html">Product</a>
-        <a href="blogs.html">Blogs</a>
-      </nav>
-      <a class="nav-cta" href="#cta">Get in touch</a>
-    </div>
-  </header>
+# Modify title in header
+blazrs_header = re.sub(r'<title>.*?</title>', '<title>Our Mission | Blazrs</title>', blazrs_header)
+
+# Extract footer from <footer> to </html>
+footer_match = re.search(r'(<footer>.*</html>)', index_html, re.DOTALL)
+blazrs_footer = footer_match.group(1)
+
+
+# 2. The User's Code
+user_code = """
   <style>
     :root {
       --primary: var(--cyan, #00d9ff);
@@ -401,103 +388,16 @@
         });
     });
   </script>
-<footer>
-    <div class="wrap">
-      <div class="foot-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; text-align: left;">
-        
-        <!-- Column 1: Logo & About -->
-        <div style="display: flex; flex-direction: column; gap: 16px;">
-          <h3 style="color: #fff; font-size: 24px; font-weight: 700; margin: 0; letter-spacing: -0.5px;">Blazrs</h3>
-          <p style="color: rgba(255,255,255,0.7); font-size: 14px; margin: 0; line-height: 1.6;">Blazrs is a trusted Salesforce implementation partner headquartered in India, helping businesses transform sales, service, manufacturing, automotive, and customer operations with Salesforce.</p>
-        </div>
+"""
 
-        <!-- Column 2: Quick Links -->
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-          <h4 style="color: #fff; font-size: 16px; margin: 0; margin-bottom: 8px;">Quick Links</h4>
-          <a href="index.html" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px; transition: color 0.2s;">Home</a>
-          <a href="about.html" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px; transition: color 0.2s;">About Us</a>
-          <a href="salesforce.html" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px; transition: color 0.2s;">Services</a>
-          <a href="contact.html" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px; transition: color 0.2s;">Contact Us</a>
-        </div>
+# 3. Combine it into about.html
+# Since the body background is dark in the user's code, we should ensure the body tag has the dark background styling
+# In Blazrs, we can just apply a specific class to body, or since the CSS rules apply to body naturally, it's fine.
+final_html = blazrs_header + user_code + blazrs_footer
 
-        <!-- Column 3: Our Services -->
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-          <h4 style="color: #fff; font-size: 16px; margin: 0; margin-bottom: 8px;">Our Services</h4>
-          <a href="salesforce.html" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px; transition: color 0.2s;">Advisory</a>
-          <a href="salesforce.html" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px; transition: color 0.2s;">Digital Transformation</a>
-          <a href="salesforce.html" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px; transition: color 0.2s;">Salesforce CRM Implementation Services</a>
-          <a href="salesforce.html" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px; transition: color 0.2s;">Application Managed Services</a>
-          <a href="salesforce.html" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px; transition: color 0.2s;">Training</a>
-          <a href="salesforce.html" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px; transition: color 0.2s;">Support & Administration</a>
-        </div>
+# Wait! blazrs_header contains <body class="dark-theme"> or something?
+# In index.html, it's just <body>.
+# The user's css sets `body { background: var(--bg-dark); }`. This will make the whole page dark. Perfect.
 
-        <!-- Column 4: Contact Info -->
-        <div style="display: flex; flex-direction: column; gap: 16px;">
-          <h4 style="color: #fff; font-size: 16px; margin: 0; margin-bottom: 8px;">Contact Info</h4>
-          
-          <div style="display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.7); font-size: 14px;">
-            <span style="font-size: 16px;">✉️</span> <a href="mailto:contact@blazrs.com" style="color: inherit; text-decoration: none;">contact@blazrs.com</a>
-          </div>
-          <div style="display: flex; align-items: flex-start; gap: 12px; color: rgba(255,255,255,0.7); font-size: 14px; line-height: 1.5;">
-            <span style="font-size: 16px; margin-top: 2px;">📍</span> INDIA
-          </div>
-          
-          <div style="display: flex; align-items: center; gap: 16px; margin-top: 8px;">
-            <a href="https://www.linkedin.com/company/blazrs/" target="_blank" style="color: #fff; text-decoration: none; font-weight: 700; font-size: 16px;">in</a>
-            <a href="#" target="_blank" style="color: #fff; text-decoration: none; font-weight: 700; font-size: 16px;">X</a>
-          </div>
-        </div>
-      </div>
-      <div class="foot-bottom" style="text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; color: rgba(255,255,255,0.5); font-size: 13px; display: block;">
-        Copyright © 2026 All Rights Reserved. Designed by Blazrs.
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-
-<!-- Google Calendar Modal -->
-<div id="calendar-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 9999; align-items: center; justify-content: center; backdrop-filter: blur(5px);">
-  <div style="background: #fff; width: 90%; max-width: 1000px; height: 90%; border-radius: 12px; overflow: hidden; position: relative; display: flex; flex-direction: column; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
-    <div style="padding: 16px 24px; border-bottom: 1px solid #eaeaea; display: flex; justify-content: space-between; align-items: center; background: #fafafa;">
-      <h3 style="margin: 0; font-size: 18px; color: #111;">Book an Appointment</h3>
-      <button onclick="document.getElementById('calendar-modal').style.display='none'" style="background: none; border: none; font-size: 24px; cursor: pointer; color: #666; padding: 0; line-height: 1;">&times;</button>
-    </div>
-    <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ22-kvU-0nv6IHKizxiKM92kjPgcvRcpP32etHoQtGYKkFDlKsYRve2POXJhLf1n-WW34eHe2b0?gv=true" style="border: 0; width: 100%; flex-grow: 1;" frameborder="0"></iframe>
-  </div>
-</div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  var links = document.querySelectorAll("a[href^='https://calendar.google.com/calendar/appointments/']");
-  links.forEach(function(link) {
-    link.addEventListener("click", function(e) {
-      e.preventDefault();
-      var modal = document.getElementById("calendar-modal");
-      modal.style.display = "flex";
-      // Optional: hide body scroll
-      document.body.style.overflow = "hidden";
-    });
-  });
-  
-  // Close modal when clicking outside
-  document.getElementById("calendar-modal").addEventListener("click", function(e) {
-    if(e.target === this) {
-      this.style.display = "none";
-      document.body.style.overflow = "auto";
-    }
-  });
-  
-  // Also handle closing on the X button (reset overflow)
-  var closeBtn = document.querySelector("#calendar-modal button");
-  if(closeBtn) {
-    closeBtn.addEventListener("click", function() {
-      document.body.style.overflow = "auto";
-    });
-  }
-});
-</script>
-
-</body>
-
-</html>
+with open('about.html', 'w') as f:
+    f.write(final_html)
